@@ -1,0 +1,1001 @@
+number_of_crime,sex,type,age
+65,M,Robbery,<12
+30,F,Robbery,12 to 17
+44,M,assault,45 to 54
+45,F,Sexual Violation,45 to 54
+57,M,assault,45 to 54
+40,F,assault,25-34
+44,M,Sexual Violation,45 to 54
+52,F,Sexual Violation,18 to 24
+42,F,Sexual Violation,25-34
+57,F,Robbery,18 to 24
+43,F,assault,12 to 17
+48,F,assault,35 to 44
+51,M,assault,12 to 17
+53,F,assault,18 to 24
+56,F,assault,65+
+48,F,Robbery,35 to 44
+35,M,assault,55 to 64
+46,M,assault,<12
+49,M,Sexual Violation,55 to 64
+52,F,Sexual Violation,35 to 44
+40,M,assault,65+
+52,F,Robbery,65+
+43,M,assault,<12
+56,F,Robbery,25-34
+52,M,Sexual Violation,35 to 44
+48,F,Robbery,25-34
+50,M,assault,45 to 54
+51,F,Robbery,55 to 64
+57,F,Sexual Violation,45 to 54
+49,F,Robbery,45 to 54
+38,F,Sexual Violation,55 to 64
+61,M,Sexual Violation,55 to 64
+54,F,Sexual Violation,65+
+48,M,Robbery,35 to 44
+49,M,assault,35 to 44
+43,F,Robbery,<12
+51,M,assault,<12
+48,M,assault,45 to 54
+46,F,Robbery,12 to 17
+47,M,assault,35 to 44
+50,M,Sexual Violation,12 to 17
+79,M,Robbery,65+
+52,F,Sexual Violation,<12
+45,M,assault,45 to 54
+45,M,Sexual Violation,25-34
+39,F,Robbery,12 to 17
+42,F,assault,65+
+63,F,Sexual Violation,65+
+48,F,Robbery,55 to 64
+58,M,assault,55 to 64
+45,M,Robbery,25-34
+58,M,Robbery,55 to 64
+43,F,Sexual Violation,12 to 17
+46,F,Robbery,12 to 17
+50,M,assault,12 to 17
+44,M,assault,45 to 54
+51,F,Sexual Violation,18 to 24
+76,F,Robbery,45 to 54
+52,M,Sexual Violation,35 to 44
+49,F,Sexual Violation,18 to 24
+45,F,Sexual Violation,35 to 44
+48,M,Sexual Violation,18 to 24
+67,M,Sexual Violation,<12
+58,M,Sexual Violation,55 to 64
+76,F,Sexual Violation,12 to 17
+55,F,Robbery,25-34
+57,F,Robbery,65+
+42,M,assault,25-34
+56,F,Robbery,25-34
+66,F,Robbery,55 to 64
+57,F,assault,18 to 24
+50,M,Sexual Violation,35 to 44
+45,M,Robbery,<12
+46,F,Sexual Violation,65+
+48,F,Sexual Violation,25-34
+48,M,Robbery,18 to 24
+54,M,Sexual Violation,45 to 54
+54,M,Robbery,<12
+53,F,Sexual Violation,12 to 17
+57,F,Sexual Violation,12 to 17
+39,M,assault,12 to 17
+55,M,Robbery,35 to 44
+46,M,assault,65+
+51,F,Sexual Violation,65+
+60,F,Robbery,<12
+36,F,Sexual Violation,55 to 64
+39,M,Robbery,12 to 17
+50,F,Robbery,<12
+42,M,Sexual Violation,25-34
+55,F,Sexual Violation,18 to 24
+45,M,Robbery,55 to 64
+40,M,Sexual Violation,55 to 64
+57,M,Sexual Violation,25-34
+41,M,Robbery,<12
+70,F,Sexual Violation,55 to 64
+50,F,Robbery,65+
+53,F,Robbery,18 to 24
+56,F,assault,12 to 17
+50,F,assault,55 to 64
+53,M,Sexual Violation,35 to 44
+54,F,Robbery,45 to 54
+52,M,Robbery,65+
+41,M,assault,45 to 54
+42,M,assault,35 to 44
+44,M,Sexual Violation,<12
+51,F,assault,65+
+57,M,assault,65+
+44,M,Sexual Violation,12 to 17
+53,M,assault,<12
+44,F,Sexual Violation,35 to 44
+53,M,Robbery,12 to 17
+46,F,Robbery,<12
+60,M,Robbery,65+
+57,M,Sexual Violation,18 to 24
+47,F,Robbery,45 to 54
+47,M,assault,55 to 64
+47,M,assault,45 to 54
+46,M,assault,25-34
+42,M,Sexual Violation,18 to 24
+48,F,assault,18 to 24
+50,M,assault,<12
+40,M,Robbery,55 to 64
+52,M,Sexual Violation,65+
+58,M,assault,55 to 64
+48,F,Sexual Violation,18 to 24
+46,M,Robbery,45 to 54
+49,F,Sexual Violation,35 to 44
+45,F,assault,45 to 54
+55,F,Robbery,45 to 54
+40,F,Sexual Violation,35 to 44
+40,F,Sexual Violation,12 to 17
+53,M,assault,35 to 44
+41,F,Robbery,65+
+47,M,assault,12 to 17
+58,F,assault,35 to 44
+43,F,Sexual Violation,35 to 44
+51,F,Robbery,35 to 44
+65,F,Robbery,45 to 54
+62,M,Sexual Violation,55 to 64
+57,M,Robbery,65+
+35,M,assault,55 to 64
+53,F,assault,<12
+56,M,Sexual Violation,12 to 17
+54,M,Sexual Violation,<12
+47,M,assault,25-34
+57,M,assault,12 to 17
+57,M,Sexual Violation,45 to 54
+45,F,Robbery,65+
+56,M,Robbery,35 to 44
+48,F,assault,35 to 44
+48,M,assault,12 to 17
+50,M,Robbery,12 to 17
+53,F,Sexual Violation,<12
+51,F,Robbery,45 to 54
+40,F,Robbery,35 to 44
+57,M,Sexual Violation,35 to 44
+54,F,Sexual Violation,<12
+37,M,assault,45 to 54
+48,M,Robbery,35 to 44
+54,M,Robbery,65+
+47,F,Robbery,18 to 24
+47,M,assault,<12
+39,M,Sexual Violation,25-34
+39,M,assault,35 to 44
+54,F,Sexual Violation,45 to 54
+46,M,assault,35 to 44
+55,F,Sexual Violation,18 to 24
+48,M,Sexual Violation,55 to 64
+51,F,assault,55 to 64
+49,M,Sexual Violation,18 to 24
+51,M,Sexual Violation,55 to 64
+47,M,Sexual Violation,65+
+41,M,Robbery,12 to 17
+50,F,assault,<12
+58,F,Sexual Violation,55 to 64
+50,M,assault,55 to 64
+45,M,assault,25-34
+47,F,assault,25-34
+39,M,Sexual Violation,<12
+42,F,Robbery,12 to 17
+44,F,assault,25-34
+56,F,Robbery,12 to 17
+46,F,assault,65+
+38,F,assault,45 to 54
+47,M,assault,55 to 64
+49,F,Sexual Violation,12 to 17
+41,F,Sexual Violation,12 to 17
+41,F,assault,<12
+34,F,assault,18 to 24
+47,F,Robbery,45 to 54
+46,F,Robbery,55 to 64
+43,F,assault,55 to 64
+53,F,Robbery,12 to 17
+35,F,Robbery,55 to 64
+64,M,Robbery,18 to 24
+45,F,Robbery,55 to 64
+45,F,Sexual Violation,65+
+40,F,Robbery,12 to 17
+52,M,assault,12 to 17
+47,F,Sexual Violation,12 to 17
+47,F,Sexual Violation,18 to 24
+58,M,Robbery,12 to 17
+44,M,Robbery,12 to 17
+51,F,Sexual Violation,25-34
+47,M,Sexual Violation,25-34
+63,F,Sexual Violation,12 to 17
+46,M,Sexual Violation,55 to 64
+45,F,Sexual Violation,12 to 17
+53,F,Sexual Violation,65+
+60,M,Sexual Violation,<12
+51,M,Sexual Violation,55 to 64
+44,M,Robbery,55 to 64
+49,M,Sexual Violation,65+
+54,F,assault,35 to 44
+45,M,Sexual Violation,25-34
+49,M,assault,65+
+54,M,Robbery,45 to 54
+44,M,Robbery,65+
+49,F,Sexual Violation,<12
+43,F,Sexual Violation,45 to 54
+50,F,Robbery,18 to 24
+38,F,Sexual Violation,35 to 44
+56,M,Robbery,55 to 64
+41,M,assault,<12
+49,M,Sexual Violation,12 to 17
+54,F,assault,35 to 44
+41,F,Sexual Violation,35 to 44
+51,F,Robbery,55 to 64
+50,M,Robbery,45 to 54
+37,M,Sexual Violation,25-34
+51,M,Robbery,45 to 54
+40,F,Sexual Violation,25-34
+50,M,Robbery,12 to 17
+48,M,Sexual Violation,55 to 64
+48,F,Robbery,35 to 44
+55,M,Sexual Violation,65+
+50,F,assault,65+
+55,M,Sexual Violation,55 to 64
+52,F,assault,12 to 17
+36,F,Sexual Violation,45 to 54
+56,F,assault,<12
+46,M,Sexual Violation,<12
+47,M,Sexual Violation,45 to 54
+48,F,Robbery,45 to 54
+44,F,Robbery,25-34
+49,F,Robbery,45 to 54
+45,F,assault,55 to 64
+44,M,Sexual Violation,45 to 54
+47,F,assault,55 to 64
+43,M,Sexual Violation,65+
+53,M,Robbery,12 to 17
+54,M,assault,35 to 44
+57,M,Robbery,65+
+48,F,Robbery,45 to 54
+58,M,assault,35 to 44
+56,F,assault,65+
+47,M,assault,18 to 24
+38,F,Robbery,65+
+47,M,Sexual Violation,<12
+54,F,Sexual Violation,65+
+45,M,assault,55 to 64
+52,F,Robbery,25-34
+59,F,Robbery,<12
+45,M,Sexual Violation,35 to 44
+47,F,Robbery,18 to 24
+61,M,assault,65+
+39,F,assault,45 to 54
+43,M,Robbery,65+
+55,F,Robbery,35 to 44
+57,F,Sexual Violation,18 to 24
+49,M,assault,<12
+46,M,Robbery,65+
+40,F,assault,45 to 54
+52,M,Sexual Violation,45 to 54
+41,F,assault,12 to 17
+42,F,Robbery,65+
+48,M,Sexual Violation,25-34
+57,F,Robbery,<12
+55,M,Robbery,45 to 54
+48,F,Sexual Violation,55 to 64
+43,M,assault,18 to 24
+37,M,Sexual Violation,55 to 64
+50,M,Sexual Violation,55 to 64
+45,F,assault,25-34
+51,F,Sexual Violation,65+
+40,M,assault,12 to 17
+53,M,Sexual Violation,65+
+46,F,Robbery,55 to 64
+55,F,Sexual Violation,55 to 64
+48,M,Sexual Violation,18 to 24
+61,F,Robbery,18 to 24
+51,M,Robbery,65+
+41,M,Sexual Violation,<12
+52,M,assault,12 to 17
+55,F,Sexual Violation,25-34
+47,F,Robbery,55 to 64
+55,M,Robbery,55 to 64
+41,M,assault,55 to 64
+54,M,Robbery,12 to 17
+49,F,Sexual Violation,12 to 17
+43,M,Robbery,25-34
+48,F,Sexual Violation,12 to 17
+51,M,Sexual Violation,55 to 64
+48,F,assault,35 to 44
+41,M,Sexual Violation,45 to 54
+53,M,Sexual Violation,45 to 54
+48,F,Robbery,12 to 17
+54,M,Sexual Violation,12 to 17
+63,F,Robbery,65+
+42,M,Sexual Violation,35 to 44
+46,M,assault,35 to 44
+60,F,Sexual Violation,65+
+55,F,Robbery,35 to 44
+48,F,Robbery,12 to 17
+54,M,Sexual Violation,45 to 54
+51,M,Sexual Violation,65+
+53,F,Sexual Violation,45 to 54
+46,F,assault,12 to 17
+39,M,assault,55 to 64
+48,M,Sexual Violation,35 to 44
+42,F,assault,18 to 24
+55,M,assault,12 to 17
+54,M,Sexual Violation,65+
+47,M,Sexual Violation,65+
+48,M,assault,<12
+45,M,Sexual Violation,<12
+44,F,Sexual Violation,65+
+67,F,Robbery,55 to 64
+54,M,assault,12 to 17
+52,F,Sexual Violation,25-34
+48,F,assault,12 to 17
+56,F,Sexual Violation,<12
+51,M,Robbery,25-34
+52,M,assault,<12
+42,M,Sexual Violation,<12
+43,M,assault,55 to 64
+55,M,Robbery,<12
+47,M,Sexual Violation,35 to 44
+58,M,Robbery,<12
+54,F,Sexual Violation,65+
+49,M,Sexual Violation,55 to 64
+42,M,Robbery,25-34
+56,F,assault,45 to 54
+43,M,Sexual Violation,12 to 17
+51,M,assault,45 to 54
+49,M,Robbery,25-34
+41,M,Sexual Violation,55 to 64
+49,M,Robbery,35 to 44
+62,M,assault,35 to 44
+57,F,assault,12 to 17
+37,F,Robbery,18 to 24
+58,M,assault,45 to 54
+53,F,assault,55 to 64
+51,F,Robbery,12 to 17
+47,F,assault,<12
+41,M,assault,12 to 17
+47,F,Sexual Violation,12 to 17
+44,M,Sexual Violation,55 to 64
+34,F,Sexual Violation,45 to 54
+54,M,Robbery,12 to 17
+49,M,Robbery,65+
+52,F,assault,12 to 17
+48,M,assault,<12
+59,F,Sexual Violation,55 to 64
+51,M,assault,<12
+51,M,assault,<12
+56,M,assault,<12
+50,F,assault,45 to 54
+55,F,assault,65+
+56,F,assault,25-34
+33,F,assault,45 to 54
+58,M,Robbery,45 to 54
+36,F,Robbery,45 to 54
+45,F,assault,35 to 44
+60,M,Sexual Violation,12 to 17
+47,M,Robbery,18 to 24
+38,F,Sexual Violation,12 to 17
+41,F,Sexual Violation,12 to 17
+52,M,assault,45 to 54
+51,M,assault,55 to 64
+46,M,Sexual Violation,45 to 54
+39,M,Robbery,65+
+49,F,Sexual Violation,35 to 44
+58,F,Sexual Violation,65+
+48,F,Sexual Violation,65+
+45,F,assault,55 to 64
+56,F,Sexual Violation,<12
+46,F,Sexual Violation,<12
+47,M,assault,55 to 64
+41,F,Robbery,<12
+60,F,assault,65+
+56,M,assault,45 to 54
+49,F,assault,18 to 24
+48,M,Sexual Violation,45 to 54
+44,M,Robbery,45 to 54
+42,M,Sexual Violation,12 to 17
+37,M,Sexual Violation,35 to 44
+52,M,Robbery,45 to 54
+42,F,assault,45 to 54
+40,M,Robbery,25-34
+66,F,Robbery,<12
+45,F,assault,<12
+53,M,Robbery,65+
+50,M,assault,18 to 24
+41,F,Sexual Violation,65+
+42,F,Sexual Violation,12 to 17
+54,F,Robbery,18 to 24
+53,F,Sexual Violation,18 to 24
+47,F,Sexual Violation,12 to 17
+49,F,assault,25-34
+38,M,Robbery,45 to 54
+53,M,Sexual Violation,55 to 64
+59,M,Robbery,18 to 24
+57,M,assault,25-34
+49,F,Sexual Violation,18 to 24
+36,M,assault,<12
+42,M,assault,18 to 24
+55,F,assault,18 to 24
+49,F,Robbery,12 to 17
+33,F,assault,25-34
+55,F,Sexual Violation,55 to 64
+49,F,Robbery,25-34
+60,F,Robbery,65+
+49,M,Robbery,18 to 24
+42,M,Sexual Violation,65+
+52,M,Robbery,55 to 64
+41,M,assault,18 to 24
+53,M,assault,35 to 44
+44,F,Sexual Violation,25-34
+51,F,Robbery,25-34
+45,F,assault,45 to 54
+44,M,Sexual Violation,12 to 17
+65,M,Sexual Violation,18 to 24
+45,M,assault,25-34
+51,F,Sexual Violation,55 to 64
+51,M,assault,65+
+63,F,Robbery,25-34
+46,F,Sexual Violation,<12
+49,F,Robbery,12 to 17
+52,M,Sexual Violation,25-34
+38,F,Robbery,25-34
+41,M,Sexual Violation,65+
+50,F,Robbery,12 to 17
+66,M,Robbery,55 to 64
+44,F,Sexual Violation,55 to 64
+39,F,Robbery,45 to 54
+42,F,assault,25-34
+43,F,Robbery,12 to 17
+56,F,Robbery,65+
+61,M,Robbery,65+
+48,F,assault,25-34
+54,F,Sexual Violation,12 to 17
+56,F,Robbery,12 to 17
+52,F,Sexual Violation,45 to 54
+58,F,Sexual Violation,35 to 44
+54,M,Sexual Violation,<12
+46,F,assault,18 to 24
+67,M,Robbery,55 to 64
+50,F,Robbery,12 to 17
+57,M,Robbery,55 to 64
+62,F,assault,25-34
+42,F,Robbery,12 to 17
+40,M,Robbery,25-34
+38,M,assault,12 to 17
+58,F,Robbery,55 to 64
+60,M,assault,<12
+51,F,assault,65+
+48,F,Sexual Violation,12 to 17
+56,M,assault,<12
+53,M,Robbery,55 to 64
+42,F,Sexual Violation,<12
+48,M,assault,<12
+47,M,Robbery,12 to 17
+45,M,assault,65+
+54,F,Sexual Violation,65+
+52,M,assault,12 to 17
+61,F,Sexual Violation,55 to 64
+57,M,assault,45 to 54
+52,F,Sexual Violation,25-34
+41,M,Robbery,35 to 44
+69,F,assault,<12
+40,M,assault,25-34
+53,M,Robbery,<12
+45,M,Robbery,18 to 24
+50,F,Sexual Violation,65+
+44,M,assault,55 to 64
+49,F,Sexual Violation,12 to 17
+51,F,Robbery,45 to 54
+53,M,Sexual Violation,65+
+50,M,Sexual Violation,18 to 24
+55,F,Robbery,25-34
+50,F,Robbery,45 to 54
+42,M,Robbery,18 to 24
+73,F,assault,45 to 54
+49,F,Sexual Violation,25-34
+51,M,assault,<12
+64,M,Sexual Violation,25-34
+46,F,Robbery,55 to 64
+47,M,Sexual Violation,55 to 64
+58,M,Sexual Violation,12 to 17
+59,F,Sexual Violation,45 to 54
+54,F,Sexual Violation,55 to 64
+56,M,Robbery,55 to 64
+45,F,Robbery,25-34
+47,F,Sexual Violation,55 to 64
+60,M,assault,12 to 17
+49,F,Sexual Violation,65+
+44,M,Sexual Violation,35 to 44
+49,F,Robbery,<12
+52,F,assault,65+
+48,M,assault,<12
+44,M,assault,35 to 44
+41,F,Robbery,18 to 24
+50,F,Robbery,35 to 44
+55,M,Sexual Violation,45 to 54
+48,F,Sexual Violation,25-34
+55,F,Sexual Violation,45 to 54
+48,F,Sexual Violation,45 to 54
+55,F,Robbery,45 to 54
+55,F,Robbery,<12
+45,M,Robbery,25-34
+48,M,Robbery,45 to 54
+39,F,Robbery,65+
+46,M,Sexual Violation,18 to 24
+45,F,assault,<12
+56,F,assault,18 to 24
+62,F,assault,65+
+58,M,Robbery,12 to 17
+38,M,assault,55 to 64
+49,F,Sexual Violation,25-34
+46,M,Sexual Violation,18 to 24
+39,M,Sexual Violation,25-34
+50,F,Sexual Violation,55 to 64
+46,F,Sexual Violation,18 to 24
+51,M,assault,35 to 44
+48,M,Sexual Violation,<12
+50,M,Robbery,25-34
+62,F,assault,18 to 24
+54,F,Sexual Violation,<12
+53,M,assault,55 to 64
+56,M,Sexual Violation,35 to 44
+50,M,Robbery,18 to 24
+49,M,assault,12 to 17
+62,F,assault,35 to 44
+36,F,Sexual Violation,18 to 24
+51,F,assault,45 to 54
+57,M,Sexual Violation,65+
+57,F,assault,45 to 54
+58,M,Sexual Violation,25-34
+53,F,assault,65+
+48,M,Robbery,65+
+48,F,Sexual Violation,18 to 24
+37,F,Sexual Violation,18 to 24
+47,F,Sexual Violation,65+
+44,M,Sexual Violation,12 to 17
+56,M,Robbery,55 to 64
+68,M,Sexual Violation,45 to 54
+64,M,Robbery,45 to 54
+45,F,Sexual Violation,55 to 64
+47,M,Robbery,55 to 64
+57,M,assault,35 to 44
+44,F,Sexual Violation,12 to 17
+53,F,Sexual Violation,45 to 54
+46,M,assault,<12
+40,F,Robbery,<12
+49,M,assault,12 to 17
+38,F,assault,18 to 24
+49,F,Sexual Violation,25-34
+56,F,Robbery,35 to 44
+57,F,Sexual Violation,65+
+48,F,Robbery,<12
+44,M,Sexual Violation,35 to 44
+47,M,assault,18 to 24
+45,M,assault,12 to 17
+55,F,Sexual Violation,12 to 17
+45,F,Robbery,18 to 24
+50,M,Robbery,12 to 17
+45,M,Sexual Violation,65+
+55,F,assault,45 to 54
+53,M,Sexual Violation,12 to 17
+47,F,Sexual Violation,35 to 44
+51,F,Sexual Violation,12 to 17
+51,F,Robbery,25-34
+55,F,Robbery,55 to 64
+54,F,Sexual Violation,12 to 17
+57,M,Sexual Violation,25-34
+42,F,Robbery,55 to 64
+50,M,assault,55 to 64
+45,F,Sexual Violation,<12
+64,F,Robbery,65+
+44,M,assault,35 to 44
+50,F,Sexual Violation,55 to 64
+45,F,Sexual Violation,35 to 44
+50,M,assault,12 to 17
+41,F,Robbery,55 to 64
+47,M,assault,18 to 24
+62,F,assault,45 to 54
+60,F,assault,45 to 54
+43,M,Robbery,18 to 24
+50,F,Robbery,18 to 24
+62,F,Robbery,35 to 44
+51,F,Sexual Violation,55 to 64
+50,F,assault,65+
+45,M,Sexual Violation,35 to 44
+57,F,Robbery,<12
+51,F,Robbery,35 to 44
+62,F,assault,55 to 64
+55,F,Sexual Violation,25-34
+32,M,Sexual Violation,12 to 17
+46,M,assault,<12
+49,F,Sexual Violation,25-34
+44,M,Sexual Violation,12 to 17
+48,M,Robbery,55 to 64
+54,M,Robbery,18 to 24
+62,F,Robbery,35 to 44
+46,F,Robbery,35 to 44
+37,F,Sexual Violation,25-34
+62,F,Robbery,65+
+49,F,Robbery,<12
+52,M,Sexual Violation,45 to 54
+44,M,Sexual Violation,55 to 64
+49,M,assault,35 to 44
+57,F,assault,65+
+42,F,Robbery,12 to 17
+37,M,Sexual Violation,<12
+46,F,assault,45 to 54
+62,F,Robbery,18 to 24
+50,F,Robbery,35 to 44
+46,M,assault,55 to 64
+62,M,assault,12 to 17
+53,M,assault,65+
+44,M,Sexual Violation,45 to 54
+56,F,assault,35 to 44
+50,F,Sexual Violation,25-34
+47,M,assault,35 to 44
+54,M,Sexual Violation,65+
+46,M,assault,25-34
+49,M,Sexual Violation,65+
+51,M,assault,55 to 64
+51,M,Sexual Violation,35 to 44
+66,M,assault,25-34
+51,F,assault,35 to 44
+36,F,Robbery,12 to 17
+58,M,Robbery,65+
+53,M,Robbery,18 to 24
+45,M,Sexual Violation,65+
+62,M,assault,35 to 44
+44,M,assault,65+
+57,M,Sexual Violation,12 to 17
+51,F,Sexual Violation,65+
+53,F,Robbery,25-34
+49,M,Sexual Violation,45 to 54
+65,F,Robbery,45 to 54
+53,F,Sexual Violation,65+
+54,M,Robbery,18 to 24
+52,F,assault,65+
+49,F,Sexual Violation,55 to 64
+43,F,Robbery,65+
+66,M,Robbery,12 to 17
+54,F,assault,18 to 24
+52,M,Robbery,18 to 24
+49,F,assault,65+
+46,F,assault,35 to 44
+42,F,Robbery,45 to 54
+45,F,Sexual Violation,35 to 44
+62,F,assault,45 to 54
+56,M,Sexual Violation,18 to 24
+63,F,Robbery,18 to 24
+46,F,assault,<12
+50,M,Sexual Violation,12 to 17
+49,M,Sexual Violation,25-34
+43,M,Robbery,45 to 54
+45,M,assault,25-34
+58,M,Robbery,65+
+47,F,Sexual Violation,45 to 54
+38,F,assault,25-34
+54,F,Robbery,45 to 54
+49,F,assault,55 to 64
+47,M,assault,45 to 54
+54,M,Robbery,<12
+45,M,assault,18 to 24
+44,F,Robbery,55 to 64
+45,M,assault,18 to 24
+46,F,Robbery,<12
+46,M,Robbery,55 to 64
+46,F,Robbery,12 to 17
+54,F,Sexual Violation,55 to 64
+51,F,Sexual Violation,55 to 64
+46,M,assault,55 to 64
+51,F,Robbery,<12
+46,F,Robbery,65+
+60,F,Robbery,65+
+39,M,assault,25-34
+53,M,Sexual Violation,12 to 17
+51,M,Robbery,35 to 44
+65,F,Sexual Violation,55 to 64
+52,M,assault,25-34
+41,M,assault,65+
+47,M,Sexual Violation,65+
+49,M,Sexual Violation,18 to 24
+52,F,Sexual Violation,18 to 24
+61,M,assault,25-34
+52,M,Robbery,35 to 44
+52,M,Robbery,18 to 24
+37,F,assault,<12
+50,F,Sexual Violation,65+
+51,F,assault,35 to 44
+48,M,Robbery,<12
+57,F,assault,35 to 44
+41,M,assault,25-34
+57,M,Robbery,18 to 24
+50,F,Sexual Violation,65+
+51,M,Robbery,55 to 64
+49,M,Robbery,55 to 64
+51,F,assault,25-34
+48,F,Robbery,45 to 54
+56,F,assault,55 to 64
+52,F,assault,35 to 44
+39,F,Robbery,12 to 17
+47,M,Sexual Violation,18 to 24
+53,M,assault,45 to 54
+61,M,Sexual Violation,<12
+34,M,Robbery,65+
+52,F,Sexual Violation,12 to 17
+51,M,assault,35 to 44
+50,F,Robbery,18 to 24
+51,F,Robbery,25-34
+60,F,Sexual Violation,<12
+50,M,assault,65+
+47,F,Sexual Violation,45 to 54
+51,M,Robbery,<12
+49,F,assault,35 to 44
+58,F,assault,35 to 44
+48,F,Sexual Violation,35 to 44
+51,F,assault,45 to 54
+49,F,assault,35 to 44
+46,M,Sexual Violation,25-34
+65,F,Robbery,<12
+45,M,Sexual Violation,45 to 54
+44,M,Robbery,<12
+57,F,Sexual Violation,25-34
+53,F,Sexual Violation,<12
+42,F,assault,18 to 24
+53,M,Robbery,18 to 24
+61,M,assault,65+
+42,F,assault,35 to 44
+53,F,Sexual Violation,18 to 24
+43,F,assault,<12
+54,M,assault,<12
+41,F,Sexual Violation,65+
+52,F,Sexual Violation,12 to 17
+64,F,assault,<12
+41,F,Robbery,<12
+46,F,assault,45 to 54
+42,F,Sexual Violation,65+
+38,M,assault,55 to 64
+51,F,Robbery,12 to 17
+57,M,Sexual Violation,18 to 24
+45,M,Robbery,55 to 64
+55,M,Sexual Violation,45 to 54
+48,F,Sexual Violation,18 to 24
+42,F,Sexual Violation,45 to 54
+46,F,assault,45 to 54
+55,M,Robbery,12 to 17
+48,F,Sexual Violation,55 to 64
+55,M,Robbery,<12
+42,F,Robbery,35 to 44
+48,M,Robbery,45 to 54
+51,F,Robbery,35 to 44
+49,F,Robbery,45 to 54
+55,F,assault,12 to 17
+65,F,Robbery,18 to 24
+46,M,assault,65+
+40,M,Sexual Violation,18 to 24
+53,F,Sexual Violation,55 to 64
+44,F,Robbery,55 to 64
+50,M,Sexual Violation,45 to 54
+62,F,Sexual Violation,65+
+54,F,Robbery,<12
+63,F,assault,45 to 54
+47,M,Robbery,12 to 17
+48,M,Robbery,35 to 44
+55,F,Robbery,65+
+43,F,Robbery,18 to 24
+56,F,Sexual Violation,65+
+42,F,Robbery,45 to 54
+50,M,assault,12 to 17
+45,F,Robbery,12 to 17
+45,M,assault,45 to 54
+26,F,Sexual Violation,18 to 24
+42,F,Robbery,55 to 64
+57,M,assault,<12
+51,F,assault,65+
+55,F,assault,55 to 64
+48,F,Robbery,<12
+51,F,assault,12 to 17
+46,F,Sexual Violation,35 to 44
+46,F,Robbery,12 to 17
+48,M,Robbery,25-34
+54,F,assault,65+
+60,F,assault,25-34
+41,F,Sexual Violation,18 to 24
+47,M,Sexual Violation,35 to 44
+47,F,Robbery,<12
+47,F,assault,55 to 64
+50,F,Sexual Violation,45 to 54
+45,M,Sexual Violation,65+
+46,M,Robbery,55 to 64
+54,M,Robbery,65+
+50,M,assault,18 to 24
+56,M,assault,35 to 44
+44,M,Robbery,12 to 17
+66,M,Robbery,18 to 24
+43,F,assault,35 to 44
+41,M,Robbery,35 to 44
+44,F,Sexual Violation,55 to 64
+49,F,assault,18 to 24
+57,M,assault,25-34
+67,F,Robbery,65+
+44,F,Robbery,55 to 64
+41,F,Sexual Violation,18 to 24
+43,F,Robbery,35 to 44
+45,F,assault,55 to 64
+57,M,assault,25-34
+45,M,Sexual Violation,65+
+55,M,Sexual Violation,55 to 64
+45,M,assault,35 to 44
+55,F,Sexual Violation,45 to 54
+56,F,Sexual Violation,65+
+53,F,assault,35 to 44
+46,F,Robbery,35 to 44
+41,F,assault,55 to 64
+42,F,Robbery,<12
+55,M,Robbery,55 to 64
+55,F,Sexual Violation,35 to 44
+55,F,Robbery,18 to 24
+52,F,Sexual Violation,25-34
+53,F,Sexual Violation,65+
+42,M,Robbery,55 to 64
+46,M,Sexual Violation,45 to 54
+54,F,Sexual Violation,45 to 54
+46,F,Sexual Violation,<12
+51,F,assault,55 to 64
+54,F,assault,12 to 17
+45,M,assault,12 to 17
+43,M,Robbery,25-34
+59,F,assault,12 to 17
+48,M,Robbery,45 to 54
+57,M,Robbery,35 to 44
+45,F,Sexual Violation,55 to 64
+46,M,assault,12 to 17
+54,M,Sexual Violation,55 to 64
+54,F,Robbery,18 to 24
+51,M,Sexual Violation,12 to 17
+57,M,Robbery,25-34
+47,F,Robbery,55 to 64
+46,M,assault,65+
+47,M,Sexual Violation,65+
+48,F,Sexual Violation,<12
+46,M,Robbery,25-34
+58,M,Sexual Violation,35 to 44
+54,M,assault,45 to 54
+55,F,Sexual Violation,65+
+48,M,Sexual Violation,18 to 24
+46,F,Robbery,65+
+54,M,Sexual Violation,65+
+55,F,assault,45 to 54
+55,M,Robbery,35 to 44
+43,M,Robbery,35 to 44
+53,M,Robbery,55 to 64
+54,F,Robbery,<12
+50,M,assault,18 to 24
+60,F,Robbery,45 to 54
+40,F,assault,12 to 17
+51,F,Robbery,25-34
+45,F,Sexual Violation,25-34
+58,M,assault,18 to 24
+51,M,Robbery,45 to 54
+62,M,assault,25-34
+59,M,Robbery,65+
+51,M,assault,18 to 24
+53,F,Robbery,45 to 54
+52,M,Sexual Violation,18 to 24
+45,F,Robbery,45 to 54
+64,F,assault,25-34
+45,F,assault,55 to 64
+56,F,Sexual Violation,35 to 44
+55,M,assault,45 to 54
+50,M,assault,12 to 17
+49,F,Robbery,<12
+48,F,Sexual Violation,65+
+45,M,assault,45 to 54
+57,F,Sexual Violation,12 to 17
+57,M,assault,<12
+54,M,Robbery,12 to 17
+43,M,Sexual Violation,18 to 24
+49,M,Robbery,55 to 64
+42,F,Sexual Violation,45 to 54
+40,F,Sexual Violation,45 to 54
+57,F,Robbery,25-34
+50,F,Sexual Violation,65+
+48,F,Robbery,25-34
+50,F,assault,55 to 64
+49,M,Sexual Violation,18 to 24
+49,F,Sexual Violation,35 to 44
+53,M,Robbery,55 to 64
+44,F,Sexual Violation,45 to 54
+53,M,Robbery,<12
+53,M,assault,25-34
+55,F,assault,12 to 17
+57,F,Robbery,35 to 44
+47,M,assault,<12
+48,F,Robbery,45 to 54
+59,F,Robbery,18 to 24
+56,M,Sexual Violation,25-34
+53,M,assault,25-34
+52,F,Robbery,12 to 17
+50,M,Sexual Violation,65+
+56,F,Robbery,65+
+40,M,assault,45 to 54
+36,M,Sexual Violation,25-34
+60,M,assault,45 to 54
+46,F,assault,45 to 54
+51,F,assault,<12
+54,M,Sexual Violation,35 to 44
+52,F,assault,35 to 44
+51,M,assault,25-34
+42,M,Robbery,65+
+53,M,Robbery,35 to 44
+54,F,Sexual Violation,65+
+49,F,Sexual Violation,25-34
+63,M,assault,<12
+47,M,Sexual Violation,65+
+47,F,Sexual Violation,45 to 54
+49,F,Sexual Violation,<12
+50,F,Sexual Violation,25-34
+49,M,Robbery,35 to 44
+71,F,assault,65+
+51,F,assault,65+
+38,F,Sexual Violation,<12
+49,F,assault,25-34
+39,F,Robbery,45 to 54
+57,F,assault,<12
+63,F,Robbery,35 to 44
+43,F,Sexual Violation,18 to 24
+57,M,Robbery,18 to 24
+58,M,Robbery,<12
+38,M,Robbery,45 to 54
+50,M,Robbery,55 to 64
+54,M,Sexual Violation,55 to 64
+56,F,Sexual Violation,<12
+54,F,Robbery,25-34
+39,M,Robbery,45 to 54
+67,F,Sexual Violation,25-34
+59,M,assault,25-34
+41,M,Robbery,18 to 24
+45,F,Sexual Violation,12 to 17
+46,F,Sexual Violation,45 to 54
+52,F,Sexual Violation,65+
+50,F,Sexual Violation,35 to 44
+44,M,assault,25-34
+42,M,Sexual Violation,18 to 24
+41,F,assault,55 to 64
+56,M,Sexual Violation,<12
+49,F,assault,35 to 44
+43,M,Robbery,25-34
+44,F,Robbery,<12
+52,M,Sexual Violation,55 to 64
+52,F,assault,65+
+52,F,Sexual Violation,55 to 64
+60,F,Robbery,25-34
+50,M,Sexual Violation,55 to 64
+43,F,assault,45 to 54
+48,F,Robbery,45 to 54
+49,F,assault,55 to 64
+49,M,Robbery,18 to 24
+49,M,Robbery,12 to 17
+49,M,assault,18 to 24
+52,M,assault,35 to 44
+54,M,Sexual Violation,35 to 44
+54,F,assault,<12
+56,M,assault,25-34
+40,F,Sexual Violation,12 to 17
+53,M,assault,45 to 54
+54,M,Sexual Violation,55 to 64
+51,F,Sexual Violation,65+
+47,F,Sexual Violation,12 to 17
+41,F,Robbery,35 to 44
+53,M,Robbery,45 to 54
+59,F,Sexual Violation,25-34
+37,F,Sexual Violation,55 to 64
+49,M,assault,45 to 54
+45,F,Sexual Violation,45 to 54
+46,F,assault,25-34
+51,F,Robbery,65+
+52,F,assault,35 to 44
+53,F,Sexual Violation,55 to 64
+41,M,Robbery,55 to 64
+54,M,Robbery,35 to 44
+36,F,assault,18 to 24

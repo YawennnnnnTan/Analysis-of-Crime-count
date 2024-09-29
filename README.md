@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repo provides students with a foundation for their own projects associated with *Telling Stories with Data*. You do not need every aspect for every paper and you should delete aspects that you do not need.
+This repo contains all the data and scripts required to analyze victim counts based on age group,gender and crime type. Overall, it was found that young adults have a higher vulnerability in crime, young women are more likely to suffer sexual violence and young men are more likely to suffer property robbery.
 
 
 ## File Structure
@@ -28,5 +28,5 @@ The repo is structured as:
 
 ## Statement on LLM usage
 
-Aspects of the code were written with the help of the auto-complete tool, Codriver. The abstract and introduction were written with the help of ChatHorse and the entire chat history is available in other/llms/usage.txt.
+Aspects of my R code and paper were assisted with the help of Chat-GPT. The chat history is available in other/llm
 

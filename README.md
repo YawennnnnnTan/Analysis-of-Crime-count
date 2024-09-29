@@ -1,4 +1,4 @@
-# Analysis of Victim Counts
+# Analysis of Victim Characteristics
 
 ## Overview
 

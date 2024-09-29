@@ -1,0 +1,420 @@
+---
+title: "Analysis of Victim Counts"
+subtitle: "A Multidimensional Study Based on Age,Gender and Crime Type"
+author: 
+  - Yawen Tan
+thanks: "Code and data are available at: https://github.com/YawennnnnnTan/Analysis-of-Crime-count"
+date: "2024-09-27"
+date-format: long
+abstract: "This report offers a comprehensive multidimensional analysis of victim counts from 2014 to 2023, exploring the intricate relationships between age group, gender, and crime type. Through comparative analyses, key trends and disparities in crime patterns are identified across these demographic factors. Our findings indicate that young adults have a higher vulnerability in crime, young women are more likely to suffer sexual violence and young men are more likely to suffer property robbery. Grasping these dynamics is crucial for formulating effective prevention strategies and informed public policies."
+format: pdf
+number-sections: true
+table-of-contents: true
+toc-depth: 2
+bibliography: references.bib
+---
+
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+library(ggplot2)
+library(here)
+data <- read_csv(here::here("data/analysis_data.csv"))
+raw_data <- read_csv(here::here("data/raw_data.csv"))
+```
+
+
+# Introduction
+
+Crime victimization is a complex and urgent social issue that impacts not only individual victims but entire communities. Research by @Ainsworth2001 and @Wilcox2003 highlights that factors such as age, gender, and socioeconomic status significantly influence patterns of victimization. In urban environments, distinct differences emerge in the victimization experiences of various age groups and genders and crime types. For instance, studies by @Duncan2017 and @Piquero2018 indicate that young individuals, particularly those aged 18 to 34, are generally at a higher risk of becoming victims of crime. Additionally, specific crime types—such as violent crime, robbery, and sexual assault—exhibit varying patterns of victimization, as demonstrated by the findings of @Chappell2004 and @Farrall2005. Understanding these dynamics is essential for the development of effective prevention strategies and informed public policies.
+
+Although existing literature has identified the correlation between victimization and demographic factors, it often fails to fully explore the interactive effects of gender and age under different crime types, and this gap urgently needs to be filled. To this end, this study focuses on crime victim data in Toronto from 2014 to 2023, and uses the "Annual Police Statistical Report - Crime Victims" dataset for in-depth analysis. The data was cleaned and visualized using R language and its various data analysis tools, so as to analyze Toronto's crime data and explore the relationship between victim age, gender, crime type and crime volume, as well as their interactive relationship. This study found that young women are more likely to suffer sexual violence, young men are more likely to suffer property robbery, and young adults have a higher vulnerability in crime. These findings emphasize the importance of considering different age groups and genders and crime types and social dynamics when developing targeted crime prevention strategies, thereby providing data support and theoretical basis for policymakers.
+
+The remainder of this paper is structured as follows. @sec-data discusses raw data, analytical data, data measurement and data visualization which includes the plots of each variable and its response, as well as plots of variable interactions. @sec-result shows the relationship between different age groups and genders in crime victimization, and explores specific crime types. @sec-discussion discusses the results of @sec-result going into detail which highlights the complex relationship between sociocultural background and crime patterns. @sec-weaknesses_and_next_steps points out the limitations of the data and research, and proposes the focus that future research should focus on to enhance the depth and accuracy of the research.
+
+
+# Data {#sec-data}
+
+The data for this paper comes from @citeOpenDataTorontoWebsite and was accessed using the opendatatoronto library @opendatatorotno. The dataset selected, “About Police Annual Statistical Report - Victims of Crimes” (n.d.), contains crime counts from 2014 to 2023, is updated annually, and was last refreshed on August 2, 2024. Sourced and published by Toronto Police Services, this data complies with the Municipal Freedom of Information and Protection of Privacy Act, ensuring privacy protection for individuals involved in the reported incidents. The dataset was chosen for its extensive data and variety of variables recorded over the five-year period, enabling a comprehensive analysis of crime characteristics.
+
+## Raw Data
+
+The raw downloaded data is shown in @tbl-raw-data-1 and @tbl-raw-data-2, as you can see it contains a total of 9 variables and see the details of these 9 variables in @sec-appendix:
+
+
+```{r}
+#| label: tbl-raw-data-1
+#| tbl-cap: First 8 entries of Raw Crime Count Dataset
+#| echo: false
+#| warning: false
+#| message: false
+
+#Graph
+head_raw_data <- head(raw_data,8)
+# Note there is a type in Description within the original data set itself
+knitr::kable(head_raw_data[, 1:4], format = "simple", col.names = c('_id','REPORT_YEAR','CATEGORY', 'SUBTYPE'))
+
+```
+
+
+```{r}
+#| label: tbl-raw-data-2
+#| tbl-cap: First 8 entries of Raw Crime Count Dataset
+#| echo: false
+#| warning: false
+#| message: false
+head_raw_data <- head(raw_data,8)
+knitr::kable(head_raw_data[, 5:9], format = "simple", col.names = c('ASSAULT_SUBTYPE','SEX','AGE_GROUP', 'AGE_COHORT','COUNT_'))
+
+```
+
+## Cleaned Data(Analysis Data)
+
+The cleaned data is displayed in @tbl-data, as you can see it contains a total of 4 variables:
+
+```{r}
+#| label: tbl-data
+#| tbl-cap: First 8 entires of Cleaned Crime Count Dataset
+#| echo: false
+#| warning: false
+#| message: false
+
+#Table
+head_data <- head(data,8)
+# Note there is a type in Description within the original data set itself
+knitr::kable(head_data[, 1:4], format = "simple", col.names = c('crime_type', 'sex', 'age_group','crime_count'))
+
+```
+## Data Tools and Measurement
+
+The analyses were conducted in R @citeR, with support from several packages: tidyverse @citeTidyverse, here @citeHere, dplyr @citeDplyr, janitor @citeJanitor, ggplot2, @citeGgplot2, and knitr @citeKnitr and opendatatorotno @opendatatorotno.
+
+
+To analysis crime counts based on gender, crime type and age group, in the original(raw) dataset(@tbl-raw-data-1 and @tbl-raw-data-2), the variables `id`, `REPORT_YEAR`, and `ASSAULT_SUBTYPE` were not relevant to our analysis. Additionally, since `CATEGORY` contained only one value and `AGE_GROUP` was similar to `AGE_COHORT`, we removed these variables (id, REPORT_YEAR, ASSAULT_SUBTYPE, CATEGORY, AGE_GROUP) to reduce the data size. The remaining variables were renamed for clarity: `SUBTYPE` became `crime_type`, `SEX` was changed to `sex`, `AGE_COHORT` became `age_group`, and `COUNT_` was renamed to `crime_count`. Values such as “other” in `crime_type`, “Unknown” in `sex`, and “Unknown” in `age_group` were also removed as they fell outside the scope of our study and formed the cleaned dataset(@tbl-data). Finally, the cleaned data was checked to ensure no missing values and that all data points were within their expected value ranges. 
+
+
+## Data Visualization
+
+In this study, we utilize a series of charts to illustrate the relationship between age, gender, and crime type among victims from 2014 to 2023. These visualizations provide clear insights into the trends and characteristics of crime victimization across different demographic groups, offering a deeper understanding of the interplay between these multidimensional factors. In the following sections, each figure will be presented and analyzed in detail to further explore the relevant data.
+
+### Exploring the Relationship Between Age Group and Crime Counts
+
+
+```{r}
+#| label: fig-age_group-crime
+#| echo: false
+#| fig-cap: Understanding Crime Numbers:A Breakdown by Age Group
+#| warning: false
+#| message: false
+
+library(ggplot2)
+age_summary <- data %>%
+  group_by(age_group) %>%
+  summarise(crime_count = sum(crime_count))
+
+ggplot(age_summary, aes(x = age_group, y = crime_count)) + 
+  geom_bar(stat = "identity", width = 0.7, fill = "lightblue") +
+  labs(title = "Crime Count by Age Group", 
+       x = "Age Group", 
+       y = "Crime Count") +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 18, face = "bold", color = "#2E3A87"),
+    axis.title.x = element_text(size = 12, face = "bold"),
+    axis.title.y = element_text(size = 12, face = "bold"),
+    axis.text = element_text(size = 10),
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.major = element_line(color = "gray", linetype = "dashed"),
+    panel.grid.minor = element_blank()
+  )
+
+```
+@fig-age_group-crime illustrates the total number of victims in each age group from 2014 to 2023 and the age groups are divided into >12, 12-17, 18-24, 25-34, 35-44, 45-54, 55-64 and 65+. Several key insights can be drawn from this visualization. Firstly, the 25-34 age group has the highest number of victims, indicating that individuals in this range are most frequently affected by crime. Additionally, the 18-24 age group also has a significant number of victims, second only to the 25-34 group, suggesting that young adults are at a higher risk of victimization. In contrast, the number of victims in the under-12 and 65+ age groups is relatively low.
+
+
+
+### Investigating the Relationship Between Gender and Crime Counts
+
+
+
+```{r}
+#| label: fig-gender-crime
+#| fig-cap: Gender-Based Crime Counts:A Statistical Overview
+#| echo: false
+#| warning: false
+#| message: false
+
+library(ggplot2)
+library(dplyr)
+
+colors <- c("Male" = "lightgreen", "Female" = "lightcoral")
+sex_summary <- data %>%
+  group_by(sex) %>%
+  summarise(crime_count = sum(crime_count))
+
+max_value <- max(sex_summary$crime_count)
+
+ggplot(sex_summary, aes(x = sex, y = crime_count,fill = sex)) + 
+  geom_bar(stat = "identity", width = 0.7) +
+  scale_fill_manual(values = colors) +
+  geom_text(aes(label = crime_count), 
+            vjust = 1.5,   
+            size = 5,       
+            color = "white") +
+  geom_hline(yintercept = max_value, color = "blue", linetype = "dashed", size = 1) +
+  labs(title = "Crime Count by Gender", 
+       x = "Gender", 
+       y = "Crime Count") +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 18, face = "bold", color = "#2E3A87"),
+    legend.title = element_text(size = 12, face = "bold"),  
+    axis.title.x = element_text(size = 12, face = "bold"),
+    axis.title.y = element_text(size = 12, face = "bold"),
+    axis.text = element_text(size = 10),
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.major = element_line(color = "gray", linetype = "dashed"),
+    panel.grid.minor = element_blank()
+  )
+
+
+```
+
+@fig-gender-crime displays and compares the number of crime victims by gender from 2014 to 2023, using green to represent males and red for females. While the number of victims is fairly close between genders, male victims (111,336) slightly outnumber female victims (108,620). The difference, however, is not substantial, with only 2,716 more male victims. 
+
+### Examining the Link Between Crime Types and Crime Counts
+
+
+```{r}
+#| label: fig-crime_type-crime
+#| fig-cap: Distribution of Crime Types:A Comparative View
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+
+# Summarize the average number of each different crime type
+crime_type_summary <- data %>%
+  group_by(crime_type) %>%
+  summarise(total_crime_count = sum(crime_count, na.rm = TRUE))
+
+# Graph
+ggplot(crime_type_summary, aes(x = "", y = total_crime_count, fill = crime_type)) + 
+  geom_bar(stat = "identity", width = 1,color='white') + 
+  coord_polar("y") +
+  labs(title = "Distribution of Crime Types", 
+       fill = "Crime Type") +
+  geom_text(aes(label = paste0(round(total_crime_count / sum(total_crime_count) * 100, 1), "%")),
+             position = position_stack(vjust = 0.5), 
+             color = "white", size = 4)+
+  theme_minimal()+
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 18, face = "bold", color = "#2E3A87"),
+    axis.title.x = element_text(size = 12, face = "bold"), 
+    axis.title.y = element_text(size = 12, face = "bold"),
+    axis.text.x = element_blank(), 
+    axis.ticks = element_blank(),  
+    panel.grid = element_blank(),  
+    legend.position = "right",        
+    legend.title = element_text(size = 12, face = "bold"),  
+    legend.text = element_text(size = 10)  
+  )
+```
+@fig-crime_type-crime indicates the distribution of three major crime categories—Assault, Robbery, and Sexual Violation—over the period from 2014 to 2023.Assault is represented by red, robbery is represented by green, and sexual violation is represented by blue. Assault dominates, making up approximately 75.7% of all crimes, while Robbery accounts for 13.2%, and Sexual Violation represents 11.1%. The distribution clearly indicates that assault is by far the most prevalent crime, comprising three-quarters of all recorded incidents. In contrast, robbery and sexual violation occur much less frequently. 
+
+
+### Comparative Analysis of Crime Counts by Gender and Type
+
+
+```{r}
+#| label: fig-gender-crime_type
+#| fig-cap: Comparative Analysis of Crime Counts by Gender and Type
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+
+sex_crime_summary <- data %>%
+  group_by(sex, crime_type) %>%
+  summarise(total_crime_count = sum(crime_count, na.rm = TRUE), .groups = 'drop')
+
+ggplot(sex_crime_summary, aes(x = crime_type, y = total_crime_count, fill = sex)) + 
+  geom_bar(stat = "identity", position = "dodge") + 
+  labs(title = "Crime Count by Gender and Crime Type", 
+       x = "Crime Type", 
+       y = "Total Crime Count", 
+       fill = "Gender") +
+  theme_minimal() +
+  coord_flip() +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 18, face = "bold", color = "#2E3A87"),
+    axis.title.x = element_text(size = 12, face = "bold"),
+    axis.title.y = element_text(size = 12, face = "bold"),
+    axis.text = element_text(size = 10),
+    legend.title = element_text(size = 12, face = "bold"),
+    panel.grid.major = element_line(color = "gray", linetype = "dashed"),
+    panel.grid.minor = element_blank()
+  )
+```
+
+@fig-gender-crime_type shows the number of victims of different genders and crime types from 2014 to 2023. Gender is divided into two categories: Male (blue) and Female (red), and the crime types include: Assault, Robbery, and Sexual Violation. It can be clearly seen from @fig-gender-crime_type that the number of women suffering from sexual violation is significantly higher than that of men. On the other hand, the number of men suffering from robbery is significantly higher than that of women. In the assault data, although the number of male victims is slightly higher than that of females, the gap between the two is not significant.
+
+
+
+### Comparative Analysis of Crime Counts by Age and Crime Type
+
+
+```{r}
+#| label: fig-age-crime_type
+#| fig-cap: Comparative Analysis of Crime Counts by Age and Crime Type
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+
+sex_crime_summary <- data %>%
+  group_by(age_group, crime_type) %>%
+  summarise(total_crime_count = sum(crime_count, na.rm = TRUE), .groups = 'drop')
+
+ggplot(sex_crime_summary, aes(x = age_group, y = total_crime_count, fill = crime_type)) + 
+  geom_bar(stat = "identity", position = "dodge") + 
+  labs(title = "Crime Count by Age Group and Crime Type", 
+       x = "Age Group", 
+       y = "Total Crime Count", 
+       fill = "Crime Type") +
+  theme_minimal() +
+  coord_flip() +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 16, face = "bold", color = "#2E3A87"),
+    axis.title.x = element_text(size = 12, face = "bold"),
+    axis.title.y = element_text(size = 12, face = "bold"),
+    axis.text = element_text(size = 10),
+    legend.title = element_text(size = 12, face = "bold"),  
+    panel.grid.major = element_line(color = "gray", linetype = "dashed"),
+    panel.grid.minor = element_blank()
+  )
+
+```
+@fig-age-crime_type shows the number of victims by crime type and age group from 2014 to 2023. Crime types are divided into three categories: Assault, Robbery, and Sexual Violation, represented by red, green, and blue, respectively. Age groups include >12, 12-17, 18-24, 25-34, 35-44, 45-54, 55-64, and 65+. Firstly, @fig-age-crime_type shows that the number of victims who experienced assault was particularly high in each age group. Secondly, except for the age groups <12 and 12-17, the number of Robbery is always higher than Sexual Violation.
+
+
+### Comparative Analysis of Crime Counts by Gender and Age Group
+
+
+```{r}
+#| label: fig-gender-age_group
+#| fig-cap: Comparative Analysis of Crime Counts by Gender and Age Group
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+sex_crime_summary <- data %>%
+  group_by(age_group, sex) %>%
+  summarise(total_crime_count = sum(crime_count, na.rm = TRUE), .groups = 'drop')
+
+ggplot(sex_crime_summary, aes(x = age_group, y = total_crime_count, color = sex, group = sex)) + 
+  geom_line(size = 1) + 
+  geom_point(size = 3) + 
+  labs(title = "Crime Count by Age Group and Gender", 
+       x = "Age Group", 
+       y = "Total Crime Count", 
+       color = "Gender") +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 18, face = "bold", color = "#2E3A87"),
+    axis.title.x = element_text(size = 12, face = "bold"),
+    axis.title.y = element_text(size = 12, face = "bold"),
+    axis.text = element_text(size = 10),
+    legend.title = element_text(size = 12, face = "bold"),  
+    panel.grid.major = element_line(color = "gray", linetype = "dashed"),
+    panel.grid.minor = element_blank()
+  )
+
+```
+@fig-gender-age_group is a line chart showing the number of victims of different genders and age groups from 2014 to 2023. Gender is divided into two categories: male (blue) and female (red). Age groups include: <12, 12-17, 18-24, 25-34, 35-44, 45-54, 55-64, and 65+. @fig-gender-age_group shows that the number of female victims is significantly higher than that of male victims between the ages of 18-44. It is particularly noteworthy that the number of female victims rises sharply between the ages of 12-17 and 18-24. At the same time, after reaching a peak at the age of 25-34, the number of female victims begins to decline significantly from the age of 35-44, indicating that the number of female victims decreases sharply with age. In contrast, the number of male victims fluctuates relatively less in these age groups, showing a more stable trend. 
+
+
+
+# Result{#sec-result}
+This study undertook a comprehensive analysis of crime victim data spanning from 2014 to 2023, uncovering the intricate relationship between age, gender, and crime type. The findings indicated that individuals in the 25-34 age group represented the highest number of victims, followed closely by those aged 18-24, suggesting heightened vulnerability to crime among young adults. In contrast, the victim counts for those under 12 and over 65 were significantly lower, potentially reflecting the effectiveness of protective measures and lifestyle factors during this period (@fig-age_group-crime). The analysis of various crime types revealed that assaults constituted the overwhelming majority of incidents (@fig-crime_type-crime). Furthermore, while the number of male and female victims was relatively similar overall, notable disparities emerged across specific crime types (@fig-gender-crime and @fig-gender-crime_type). In conclusion, young women were disproportionately affected by sexual assault cases, whereas young men were more frequently victims of robbery. These findings underscore the importance of considering the complex social dynamics and crime patterns when formulating targeted crime prevention strategies for different genders and age groups, thereby enhancing efforts to reduce victimization.
+
+# Discussion{#sec-discussion}
+
+Based on the information laid out in @sec-data, in particular through @fig-age_group-crime,it highlights that younger (12-17) and older (65+) individuals experience lower crime victimization rates, while young adults aged 18-44 appear to face a higher risk.. This suggests that young adults face a higher risk of victimization. This vulnerability may be influenced by multiple factors, such as inexperience, peer pressure and lifestyle choices, including nightlife activities, which are often associated with higher crime rates. The lower number of victims in the under-12 age group may reflect parental monitoring and protective measures that help protect younger children from potential threats. For the age group over 65, the lower number of victims may indicate a more stable lifestyle, and that older people tend to have fewer opportunities to participate in high-risk activities, thereby reducing the likelihood of victimization.
+
+@fig-gender-crime which indicates a near parity in victimization by gender, with males accounting for a marginally higher number of victims. It suggests a relatively balanced distribution of crime victims between men and women over the period. The small gap could indicate that certain crime types affect both genders similarly, or that criminal behavior during this time was largely gender-neutral. 
+
+@fig-crime_type-crime finds that assault is by far the most prevalent crime, comprising three-quarters of all recorded incidents and robbery and sexual violation occur much less frequently. These findings can inform policy decisions, particularly by highlighting the need for more focused interventions and resource allocation toward addressing assault, given its significant share of overall crime.
+
+@fig-gender-crime_type clearly presents that the number of women suffering from sexual violation is significantly higher than that of men. This trend reflects that the problem of sexual violence against women in society is still serious. This may be related to cultural background, gender discrimination, and social expectations of women's gender roles, which make women more likely to become targets of sexual assault in many cases. And higher number of robbery of male shows the high risk of men in property crimes. This may be related to the fact that men usually participate in high-risk social activities and travel at night more frequently, which increases their likelihood of being robbed. @fig-gender-crime_type also indicates that within the assault data, the number of male victims is slightly higher than that of females, the gap between the two is not significant. This may indicate that assault behavior is not completely affected by gender, but is closely related to factors such as specific environment, social interaction and violent culture. This finding deserves attention because it reminds us that when designing prevention measures for victims of different genders, the complexity of the social environment must be taken into account.
+
+@fig-age-crime_type shows the number of victims who experienced assault was particularly high in each age group which may reflect the high overall incidence of this crime type or may be due to the relatively broad recording criteria for assault cases in statistical reports. Thus, this type of case dominates in all age groups. Besides, except for the age groups <12 and 12-17, the number of Robbery is always higher than Sexual Violation. This trend shows that minors are more likely to become victims of sexual violence than robbery, while adult victims are more likely to face property violations in their daily lives. This may be related to the more vulnerable social status of minors and the specific context of violent crimes.
+
+@fig-gender-age_group illustrates that the number of female victims is significantly higher than that of male victims between the ages of 18-44 and the number of female victims rises sharply between the ages of 12-17 and 18-24, reflecting that women in this age group are more likely to become victims. The number of female victims begins to decline significantly from the age of 35-44, indicating that the number of female victims decreases sharply with age and the number of male victims fluctuates relatively less in these age groups, showing a more stable trend. This may be related to the lifestyle, social circle, and concern for personal safety of women in this age group, indicating that they may take more precautions to protect themselves. In contrast, the number of male victims fluctuates relatively less in these age groups, showing a more stable trend. This may indicate that certain types of violence or crimes tend to target young women, while the age distribution of male victims is more balanced.
+
+Overall, this analysis highlights the intricate dynamics of crime victimization across various age groups and genders. The data indicates that young adults, particularly those aged 18 to 44, are at a heightened risk of victimization, likely influenced by lifestyle choices and societal pressures. In contrast, the under-12 and over-65 age groups benefit from protective factors such as parental supervision and stable lifestyles, leading to lower rates of victimization. Regarding gender, crime impacts both men and women similarly; however, certain types of crime, notably sexual violence, disproportionately affect women. This disparity reflects ongoing societal issues such as gender discrimination and entrenched cultural norms. Moving forward, it is essential to consider how shifts in social attitudes and law enforcement practices may further influence these trends. By integrating a temporal analysis that accounts for such factors, we can develop more nuanced preventive strategies tailored to the needs of different demographic groups. This approach can ultimately contribute to a safer community environment by fostering targeted interventions aimed at reducing victimization rates across the spectrum of crime.
+
+
+# Weaknesses and next steps{#sec-weaknesses_and_next_steps}
+
+The report has several weaknesses that may compromise the depth and validity of its findings. Firstly, the data utilized lacks specified addresses, resulting in the inclusion of occurrences reported outside the City of Toronto limits, as well as incidents without verified locations. This absence of geographical specificity may impede the ability to draw accurate conclusions regarding crime patterns within the city itself. Furthermore, although the analysis spans multiple years, it does not adequately account for temporal factors that could influence crime dynamics. Specifically, the study overlooks potential changes in crime patterns, shifts in social attitudes, and variations in law enforcement practices over time, all of which may significantly affect victimization rates. Incorporating a temporal analysis would provide a more nuanced understanding of the evolving nature of crime and victimization, thereby enhancing the overall rigor of the study’s conclusions.
+
+Next, we can consider adding geographic identifiers to the data to remove incidents without specific addresses as much as possible. This can be achieved by working with local law enforcement agencies or other data providers to obtain more detailed geographic information. In addition, time series analysis methods can be introduced into the analysis to explore changes between different years, especially factors related to changes in social attitudes and law enforcement practices. Consider using ARIMA models or other time series analysis methods to assess the impact of time on crime trends which is mensioned in @Box1976.
+
+
+
+\newpage
+
+# Appendix {#sec-appendix}
+
+-   **id**: Unique row identifier for Open Data database
+-   **REPORT_YEAR** : Year crime was reported from 2014 to 2023
+-   **CATEGORY** : Crime category:
+    -   Crimes Against the Person
+-   **SUBTYPE** : Crime category subtype:
+    -   Assault
+    -   Sexual Violation
+    -   Robbery
+    -   OtherAssault Peace Officer
+-   **ASSAULT_SUBTYPE** : Subtypes of assault (see @sec-appendixA for details)
+    -   Assault Peace Officer
+    -   Other
+    -   N/A: Not recorded
+    -   Aggravated Peace Officer
+    -   Assault Peace Officer Weapon/Bodily Harm
+    -   Assault Resist Arrest
+-   **SEX** : Sex of identified victim
+    -   Female
+    -   Male
+-   **AGE_GROUP** : Age group of identified victim
+    -   Adult 
+    -   Youth
+    -   Child
+    -   Unknown
+-   **AGE_COHORT** : Age cohort of identified victim (see @sec-appendixA for details)
+    -   <12: the age of victim less than 12 years old
+    -   12 to 17: the age of victim lbetween 12 and 17 years old
+    -   18 to 24: the age of victim lbetween 18 and 24 years old
+    -   25 to 34: the age of victim lbetween 25 and 34 years old
+    -   35 to 44: the age of victim lbetween 35 and 44 years old
+    -   45 to 54: the age of victim lbetween 45 and 54 years old
+    -   55 to 64: the age of victim lbetween 55 and 64 years old
+    -   65+: the age of victim larger than 65
+    -   Unknown
+-   **COUNT_** : Count of identified victims
+
+
+\newpage
+
+# References

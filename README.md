@@ -28,5 +28,5 @@ The repo is structured as:
 
 ## Statement on LLM usage
 
-Aspects of my R code and paper were assisted with the help of Chat-GPT. The chat history is available in other/llm
+Aspects of my R code and paper were assisted with the help of Chat-GPT. The chat history is available in other/llm/usage.txt.
 
